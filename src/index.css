@@ -1,14 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@200&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap');
 
-@import "tailwindcss";
+/* Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
-    font-family: Outfit;
+/* Set global font */
+* {
+  font-family: 'Outfit', sans-serif;
 }
-.active hr{
-    @apply block 
+
+/* Example custom styling */
+
+/* Show <hr> inside .active */
+.active hr {
+  @apply block;
 }
 
-::-webkit-scrollbar{
-    @apply hidden
+/* Hide scrollbar in Webkit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in Firefox */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE 10+ */
 }
