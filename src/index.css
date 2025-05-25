@@ -6,16 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Set global font */
+/* Set global font and hide scrollbar */
 * {
   font-family: 'Outfit', sans-serif;
-}
-
-/* Example custom styling */
-
-/* Show <hr> inside .active */
-.active hr {
-  @apply block;
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE 10+ */
 }
 
 /* Hide scrollbar in Webkit browsers */
@@ -23,8 +18,9 @@
   display: none;
 }
 
-/* Hide scrollbar in Firefox */
-* {
-  scrollbar-width: none;
-  -ms-overflow-style: none; /* IE 10+ */
+/* Use Tailwind utility in components layer */
+@layer components {
+  .active hr {
+    @apply block;
+  }
 }
